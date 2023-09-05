@@ -37,6 +37,15 @@ export class DinamicosComponent {
     console.log("Formulario Posteado")
   }
 
+  agregarJuego(){
+    const favorito : Favorito = {
+      id: this.persona.favoritos.length + 1,
+      nombre: this.nuevoJuego
+    }
+    this.persona.favoritos.push({ ...favorito })
+    this.nuevoJuego = ''
+  }
+
   eliminar(i : number){
     this.persona.favoritos.splice(i, 1)
   }
