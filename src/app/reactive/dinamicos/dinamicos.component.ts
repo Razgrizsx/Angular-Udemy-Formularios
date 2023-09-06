@@ -42,4 +42,8 @@ export class DinamicosComponent {
     console.log(this.miFormulario.value)
     this.miFormulario.reset()
   }
+
+  borrar(i : number){
+    this.favoritosArr.removeAt(i)
+  }
 }
